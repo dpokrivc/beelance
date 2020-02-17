@@ -1,0 +1,24 @@
+$def with (nav, register_form, message)
+
+<head>
+    <title>Beelance2</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="static/stylesheet.css">
+    <link rel="shortcut icon" type="image/png" href="static/honeybee.png"/>
+
+</head>
+
+<body>
+
+    $:nav
+
+    <h2>Register user!</h2>
+    
+    <form method="POST">
+        $:register_form.render()
+    </form>
+
+    <p>$message</p>
+</body>
+
+<footer></footer>

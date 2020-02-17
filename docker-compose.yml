@@ -1,0 +1,35 @@
+version: "2"
+services:
+
+  db:
+    build:
+      context: ./mysql
+      dockerfile: Dockerfile
+    networks:
+      backend:
+        ipv4_address: 10.${groupid}.0.5
+
+  app:
+    env_file:
+     - .env
+    build: 
+     context: ./src
+     dockerfile: Dockerfile
+
+    ports:
+      - "80${groupid}:8080"
+      - "4${groupid}:443"
+    depends_on:
+      - db
+    networks:
+      backend:
+        ipv4_address: 10.${groupid}.0.6
+
+networks:
+  
+  backend:
+    driver: bridge
+    ipam:
+        config:
+          - subnet: 10.${groupid}.0.0/18
+  

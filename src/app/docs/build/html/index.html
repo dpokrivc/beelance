@@ -1,0 +1,705 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Welcome to beelance2’s documentation! &#8212; beelance2  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="welcome-to-beelance2-s-documentation">
+<h1>Welcome to beelance2’s documentation!<a class="headerlink" href="#welcome-to-beelance2-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<dl class="class">
+<dt id="views.index.Index">
+<em class="property">class </em><code class="sig-prename descclassname">views.index.</code><code class="sig-name descname">Index</code><a class="headerlink" href="#views.index.Index" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="views.index.Index.GET">
+<code class="sig-name descname">GET</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#views.index.Index.GET" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get main page using the projects URL input variable to
+determine which projects to show.</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">return</dt>
+<dd class="field-odd"><p>index page</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="views.login.Login">
+<em class="property">class </em><code class="sig-prename descclassname">views.login.</code><code class="sig-name descname">Login</code><a class="headerlink" href="#views.login.Login" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="views.login.Login.GET">
+<code class="sig-name descname">GET</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#views.login.Login.GET" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show the login page</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">return</dt>
+<dd class="field-odd"><p>The login page showing other users if logged in</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="views.login.Login.POST">
+<code class="sig-name descname">POST</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#views.login.Login.POST" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Log in to the web application and register the session</dt><dd><dl class="field-list simple">
+<dt class="field-odd">return</dt>
+<dd class="field-odd"><p>The login page showing other users if logged in</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="views.logout.Logout">
+<em class="property">class </em><code class="sig-prename descclassname">views.logout.</code><code class="sig-name descname">Logout</code><a class="headerlink" href="#views.logout.Logout" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="views.logout.Logout.GET">
+<code class="sig-name descname">GET</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#views.logout.Logout.GET" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Log out of the application (kill session and reset variables)</dt><dd><dl class="field-list simple">
+<dt class="field-odd">return</dt>
+<dd class="field-odd"><p>Redirect to main page</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="views.new_project.New_project">
+<em class="property">class </em><code class="sig-prename descclassname">views.new_project.</code><code class="sig-name descname">New_project</code><a class="headerlink" href="#views.new_project.New_project" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="views.new_project.New_project.GET">
+<code class="sig-name descname">GET</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#views.new_project.New_project.GET" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the project registration form</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">return</dt>
+<dd class="field-odd"><p>New project page</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="views.new_project.New_project.POST">
+<code class="sig-name descname">POST</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#views.new_project.New_project.POST" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new project</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">return</dt>
+<dd class="field-odd"><p>Redirect to main page</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="views.new_project.New_project.compose_form">
+<code class="sig-name descname">compose_form</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">add</em><span class="sig-paren">)</span><a class="headerlink" href="#views.new_project.New_project.compose_form" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compose a new project form by adding or removing a task</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">param data</dt>
+<dd class="field-odd"><p>The data object from web.input</p>
+</dd>
+<dt class="field-even">param add</dt>
+<dd class="field-even"><p>True or False</p>
+</dd>
+<dt class="field-odd">type add</dt>
+<dd class="field-odd"><p>boolean</p>
+</dd>
+<dt class="field-even">return</dt>
+<dd class="field-even"><p>A complete project form object</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="views.new_project.New_project.get_task_count">
+<code class="sig-name descname">get_task_count</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#views.new_project.New_project.get_task_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine the number of tasks created by removing 
+the four other elements from count and divide by the 
+number of variables in one task.</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">param data</dt>
+<dd class="field-odd"><p>The data object from web.input</p>
+</dd>
+<dt class="field-even">return</dt>
+<dd class="field-even"><p>The number of tasks opened by the client</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="views.open_projects.Open_projects">
+<em class="property">class </em><code class="sig-prename descclassname">views.open_projects.</code><code class="sig-name descname">Open_projects</code><a class="headerlink" href="#views.open_projects.Open_projects" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="views.open_projects.Open_projects.GET">
+<code class="sig-name descname">GET</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#views.open_projects.Open_projects.GET" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all open projects</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">return</dt>
+<dd class="field-odd"><p>A page containing all open projects</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="views.project.Project">
+<em class="property">class </em><code class="sig-prename descclassname">views.project.</code><code class="sig-name descname">Project</code><a class="headerlink" href="#views.project.Project" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="views.project.Project.GET">
+<code class="sig-name descname">GET</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#views.project.Project.GET" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show info about a single project</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">return</dt>
+<dd class="field-odd"><p>Project info page</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="views.register.Register">
+<em class="property">class </em><code class="sig-prename descclassname">views.register.</code><code class="sig-name descname">Register</code><a class="headerlink" href="#views.register.Register" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="views.register.Register.GET">
+<code class="sig-name descname">GET</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#views.register.Register.GET" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the registration form</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">return</dt>
+<dd class="field-odd"><p>A page with the registration form</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="views.register.Register.POST">
+<code class="sig-name descname">POST</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#views.register.Register.POST" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register new user in database</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">return</dt>
+<dd class="field-odd"><p>Main page</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-views.forms"></span><dl class="function">
+<dt id="views.forms.get_new_project_form">
+<code class="sig-prename descclassname">views.forms.</code><code class="sig-name descname">get_new_project_form</code><span class="sig-paren">(</span><em class="sig-param">elements</em><span class="sig-paren">)</span><a class="headerlink" href="#views.forms.get_new_project_form" title="Permalink to this definition">¶</a></dt>
+<dd><p>Combine a project form element and task elements to make a complete project form</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">param elemets</dt>
+<dd class="field-odd"><p>All the project and task form elements</p>
+</dd>
+<dt class="field-even">return</dt>
+<dd class="field-even"><p>The ready to use project form</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="views.forms.get_project_form_elements">
+<code class="sig-prename descclassname">views.forms.</code><code class="sig-name descname">get_project_form_elements</code><span class="sig-paren">(</span><em class="sig-param">project_title=''</em>, <em class="sig-param">project_description=''</em>, <em class="sig-param">category_name=''</em><span class="sig-paren">)</span><a class="headerlink" href="#views.forms.get_project_form_elements" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Generate a set of project form elements</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param project_title</dt>
+<dd class="field-odd"><p>Project title</p>
+</dd>
+<dt class="field-even">param project_description</dt>
+<dd class="field-even"><p>Project description</p>
+</dd>
+<dt class="field-odd">param category_name</dt>
+<dd class="field-odd"><p>Name of the belonging category</p>
+</dd>
+<dt class="field-even">type project_title</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">type project_description</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+<dt class="field-even">type category_name</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">return</dt>
+<dd class="field-odd"><p>A set of project form elements</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="views.forms.get_task_form_elements">
+<code class="sig-prename descclassname">views.forms.</code><code class="sig-name descname">get_task_form_elements</code><span class="sig-paren">(</span><em class="sig-param">identifier=0</em>, <em class="sig-param">task_title=''</em>, <em class="sig-param">task_description=''</em>, <em class="sig-param">budget=''</em><span class="sig-paren">)</span><a class="headerlink" href="#views.forms.get_task_form_elements" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Generate a set of task form elements</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param identifier</dt>
+<dd class="field-odd"><p>The id of the task</p>
+</dd>
+<dt class="field-even">param task_title</dt>
+<dd class="field-even"><p>Task title</p>
+</dd>
+<dt class="field-odd">param task_description</dt>
+<dd class="field-odd"><p>Task description</p>
+</dd>
+<dt class="field-even">param budget</dt>
+<dd class="field-even"><p>Task budget</p>
+</dd>
+<dt class="field-odd">type identifier</dt>
+<dd class="field-odd"><p>int, str</p>
+</dd>
+<dt class="field-even">type task_title</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">type task_description</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+<dt class="field-even">type budget</dt>
+<dd class="field-even"><p>int, str</p>
+</dd>
+<dt class="field-odd">return</dt>
+<dd class="field-odd"><p>A set of task form elements</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<span class="target" id="module-views.utils"></span><dl class="function">
+<dt id="views.utils.get_nav_bar">
+<code class="sig-prename descclassname">views.utils.</code><code class="sig-name descname">get_nav_bar</code><span class="sig-paren">(</span><em class="sig-param">session</em><span class="sig-paren">)</span><a class="headerlink" href="#views.utils.get_nav_bar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates the page nav bar</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">return</dt>
+<dd class="field-odd"><p>The navigation bar HTML markup</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<span class="target" id="module-models.login"></span><dl class="function">
+<dt id="models.login.get_users">
+<code class="sig-prename descclassname">models.login.</code><code class="sig-name descname">get_users</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#models.login.get_users" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Retreive all registrered users from the database</dt><dd><dl class="field-list simple">
+<dt class="field-odd">return</dt>
+<dd class="field-odd"><p>users</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="models.login.match_user">
+<code class="sig-prename descclassname">models.login.</code><code class="sig-name descname">match_user</code><span class="sig-paren">(</span><em class="sig-param">username</em>, <em class="sig-param">password</em><span class="sig-paren">)</span><a class="headerlink" href="#models.login.match_user" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if user credentials are correct, return if exists</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">param username</dt>
+<dd class="field-odd"><p>The user attempting to authenticate</p>
+</dd>
+<dt class="field-even">param password</dt>
+<dd class="field-even"><p>The corresponding password</p>
+</dd>
+<dt class="field-odd">type username</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+<dt class="field-even">type password</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">return</dt>
+<dd class="field-odd"><p>user</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<span class="target" id="module-models.project"></span><dl class="function">
+<dt id="models.project.get_categories">
+<code class="sig-prename descclassname">models.project.</code><code class="sig-name descname">get_categories</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#models.project.get_categories" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all categories</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">return</dt>
+<dd class="field-odd"><p>List of categories</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="models.project.get_project_by_id">
+<code class="sig-prename descclassname">models.project.</code><code class="sig-name descname">get_project_by_id</code><span class="sig-paren">(</span><em class="sig-param">projectid</em><span class="sig-paren">)</span><a class="headerlink" href="#models.project.get_project_by_id" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Retrieve a project by its id</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param projectid</dt>
+<dd class="field-odd"><p>The project id</p>
+</dd>
+<dt class="field-even">type projectid</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">return</dt>
+<dd class="field-odd"><p>The selected project</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="models.project.get_projects_by_participant_and_status">
+<code class="sig-prename descclassname">models.project.</code><code class="sig-name descname">get_projects_by_participant_and_status</code><span class="sig-paren">(</span><em class="sig-param">userid</em>, <em class="sig-param">project_status</em><span class="sig-paren">)</span><a class="headerlink" href="#models.project.get_projects_by_participant_and_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve all projects where the user is a participant with specific status</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">param userid</dt>
+<dd class="field-odd"><p>The id of the participant</p>
+</dd>
+<dt class="field-even">param project_status</dt>
+<dd class="field-even"><p>The status to filter on</p>
+</dd>
+<dt class="field-odd">type userid</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+<dt class="field-even">type project_status</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">return</dt>
+<dd class="field-odd"><p>A list of projects</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="models.project.get_projects_by_status_and_category">
+<code class="sig-prename descclassname">models.project.</code><code class="sig-name descname">get_projects_by_status_and_category</code><span class="sig-paren">(</span><em class="sig-param">categoryid</em>, <em class="sig-param">project_status</em><span class="sig-paren">)</span><a class="headerlink" href="#models.project.get_projects_by_status_and_category" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve all projects from a category with a specific status</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">param catergoryid</dt>
+<dd class="field-odd"><p>The id of the category</p>
+</dd>
+<dt class="field-even">param project_status</dt>
+<dd class="field-even"><p>The status to filter on</p>
+</dd>
+<dt class="field-odd">type catergoryid</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+<dt class="field-even">type project_status</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">return</dt>
+<dd class="field-odd"><p>A list of projects</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="models.project.get_projects_by_status_and_owner">
+<code class="sig-prename descclassname">models.project.</code><code class="sig-name descname">get_projects_by_status_and_owner</code><span class="sig-paren">(</span><em class="sig-param">userid</em>, <em class="sig-param">project_status</em><span class="sig-paren">)</span><a class="headerlink" href="#models.project.get_projects_by_status_and_owner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve all projects owned by a user with a specific status</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">param userid</dt>
+<dd class="field-odd"><p>The id of the owner</p>
+</dd>
+<dt class="field-even">param project_status</dt>
+<dd class="field-even"><p>The status to filter on</p>
+</dd>
+<dt class="field-odd">type userid</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+<dt class="field-even">type project_status</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">return</dt>
+<dd class="field-odd"><p>A list of projects</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="models.project.set_project">
+<code class="sig-prename descclassname">models.project.</code><code class="sig-name descname">set_project</code><span class="sig-paren">(</span><em class="sig-param">categoryid</em>, <em class="sig-param">userid</em>, <em class="sig-param">project_title</em>, <em class="sig-param">project_description</em>, <em class="sig-param">project_status</em><span class="sig-paren">)</span><a class="headerlink" href="#models.project.set_project" title="Permalink to this definition">¶</a></dt>
+<dd><p>Store a project in the database</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">param categoryid</dt>
+<dd class="field-odd"><p>The id of the corresponding category</p>
+</dd>
+<dt class="field-even">param userid</dt>
+<dd class="field-even"><p>The id of the project owner</p>
+</dd>
+<dt class="field-odd">param project_title</dt>
+<dd class="field-odd"><p>The title of the project</p>
+</dd>
+<dt class="field-even">param project_description</dt>
+<dd class="field-even"><p>The project description</p>
+</dd>
+<dt class="field-odd">param project_status</dt>
+<dd class="field-odd"><p>The status of the project</p>
+</dd>
+<dt class="field-even">type categoryid</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">type userid</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+<dt class="field-even">type project_title</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">type project_description</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+<dt class="field-even">type project_status</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">return</dt>
+<dd class="field-odd"><p>The id of the new project</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="models.project.set_task">
+<code class="sig-prename descclassname">models.project.</code><code class="sig-name descname">set_task</code><span class="sig-paren">(</span><em class="sig-param">projectid</em>, <em class="sig-param">task_title</em>, <em class="sig-param">task_description</em>, <em class="sig-param">budget</em><span class="sig-paren">)</span><a class="headerlink" href="#models.project.set_task" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a task</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">param projectid</dt>
+<dd class="field-odd"><p>The corresponding project id</p>
+</dd>
+<dt class="field-even">param task_title</dt>
+<dd class="field-even"><p>The title of the task</p>
+</dd>
+<dt class="field-odd">param task_description</dt>
+<dd class="field-odd"><p>The description of the task</p>
+</dd>
+<dt class="field-even">param budget</dt>
+<dd class="field-even"><p>The task budget</p>
+</dd>
+<dt class="field-odd">type projectid</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+<dt class="field-even">type task_title</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">type task_description</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+<dt class="field-even">type budget</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<span class="target" id="module-models.register"></span><dl class="function">
+<dt id="models.register.set_user">
+<code class="sig-prename descclassname">models.register.</code><code class="sig-name descname">set_user</code><span class="sig-paren">(</span><em class="sig-param">username</em>, <em class="sig-param">password</em>, <em class="sig-param">full_name</em>, <em class="sig-param">company</em>, <em class="sig-param">phone_number</em>, <em class="sig-param">street_address</em>, <em class="sig-param">city</em>, <em class="sig-param">state</em>, <em class="sig-param">postal_code</em>, <em class="sig-param">country</em><span class="sig-paren">)</span><a class="headerlink" href="#models.register.set_user" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Register a new user in the database</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param username</dt>
+<dd class="field-odd"><p>The users unique user name</p>
+</dd>
+<dt class="field-even">param password</dt>
+<dd class="field-even"><p>The password</p>
+</dd>
+<dt class="field-odd">param full_name</dt>
+<dd class="field-odd"><p>The users full name</p>
+</dd>
+<dt class="field-even">param company</dt>
+<dd class="field-even"><p>The company the user represents</p>
+</dd>
+<dt class="field-odd">param phone_number</dt>
+<dd class="field-odd"><p>The phone number of the user</p>
+</dd>
+<dt class="field-even">param street_address</dt>
+<dd class="field-even"><p>The street address of the user</p>
+</dd>
+<dt class="field-odd">param city</dt>
+<dd class="field-odd"><p>The city where the user lives</p>
+</dd>
+<dt class="field-even">param state</dt>
+<dd class="field-even"><p>The state where the user lives</p>
+</dd>
+<dt class="field-odd">param postal_code</dt>
+<dd class="field-odd"><p>The corresponding postal code</p>
+</dd>
+<dt class="field-even">param country</dt>
+<dd class="field-even"><p>The users country</p>
+</dd>
+<dt class="field-odd">type username</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+<dt class="field-even">type password</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">type full_name</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+<dt class="field-even">type company</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">type phone_number</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+<dt class="field-even">type street_address</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">type city</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+<dt class="field-even">type state</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">type postal_code</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+<dt class="field-even">type country</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">beelance2</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, jakob notland.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,56 @@
+$def with (nav, project_form, project, tasks, permissions, categories)
+
+<head>
+    <title>Beelance2</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="static/stylesheet.css">
+    <link rel="shortcut icon" type="image/png" href="static/honeybee.png"/>
+
+</head>
+
+<body>
+    
+    $:nav
+
+    $if len(project) and (permissions[0] or project[5] == "open" or session.userid == project[2]) and session.username:
+        <h1>Project: $project[3]</h1>
+
+        $if session.userid != project[2] and project[5] == "open":
+            <div id="apply_button" onclick="location.href='/apply?projectid=$project[0]'" name="Apply" description="apply">Apply for this project</div>
+
+        <div id="project_meta">
+            <p>Status: $project[5]</p>
+            <p>Category: $categories[project[1]-1][1]</p>
+            <p>Description: $project[4]</p>
+        </div>
+
+        <ul>
+            $for task in tasks:
+                <hr>
+                <li id="$task[0]">
+                    <h3>Task: $task[2]</h3>
+                    <p>Description: $task[3]</p>
+                    <p>Budget: $task[4]</p>
+                    <p>Status: $task[5]</p>
+                    $if project[5] != "open":
+                        $for filename in get_task_files(task[0]):
+                            <a href="$filename[0]" download>$filename[0].split("/")[-1]</a>
+                            <br>
+                        <form method="POST" enctype="multipart/form-data" action="">
+                            $project_form.taskid.set_value(task[0])
+                            $:project_form.taskid.render()
+                            $if (task[5] == "waiting for delivery" or task[5] == "declined"):
+                                $if permissions[1]:
+                                    $:project_form.myfile.render()
+                                    $:project_form.submit.render()
+                                $if permissions[2]:
+                                    $:project_form.deliver.render()
+                            $if session.userid == project[2] and task[5] == "delivered":
+                                $:project_form.accepted.render()
+                                $:project_form.declined.render()
+                        </form>
+                </li>
+        </ul>
+    $else:
+        <p>You do not have permissions to view this project</p>
+</body>

@@ -1,0 +1,36 @@
+$def with (nav, apply_form, get_apply_permission_form, project, applicants, permissions)
+
+<head>
+        <title>Beelance2</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="static/stylesheet.css">
+        <link rel="shortcut icon" type="image/png" href="static/honeybee.png"/>
+</head>
+    
+<body>
+    
+    $:nav
+
+    <h1>Apply for this project</h1>
+
+    $if project[5] == "open" and session.userid != project[2]:
+        <div id="project_meta">
+            <h2>Title: $project[3]</h2>
+            <p>Description: $project[4]</p>
+            <p>Status: $project[5]</p>
+        </div>
+        
+        <form method="POST">
+            <h4>Add Users</h4>
+            $:apply_form.render()
+            <h4>Users to apply:</h4>
+
+            $for i in range(0, len(applicants)):
+                <div class="applicant">
+                    User: $applicants[i][1]
+                    $ apply_permissions_form = get_apply_permissions_form(i, permissions[i][0], permissions[i][1], permissions[i][2], applicants[i])
+                    $:apply_permissions_form.render()    
+                </div>
+        </form> 
+            
+</body>

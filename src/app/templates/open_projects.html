@@ -1,0 +1,30 @@
+$def with (nav, categories, open_projects)
+
+<head>
+    <title>Beelance2</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="static/stylesheet.css">
+    <link rel="shortcut icon" type="image/png" href="static/honeybee.png"/>
+</head>
+
+<body>
+
+    $:nav
+    
+    <h1 class="title">Open Projects:</h1>
+    
+
+    <div class="categories">
+        $for category in categories:
+            <div class="category" onclick="location.href='/open_projects?categoryid=$category[0]'">$category[1]</div>
+    </div>
+    
+    <div class="projects">
+        $for project in open_projects:
+            <div class="project" onclick="location.href='/project?projectid=$project[0]'"><h4>$project[3]</h4><p>$project[4]</p></div>
+    </div>
+
+    <img src="static/honeybee.png" alt="Honeybee">
+
+
+</body>

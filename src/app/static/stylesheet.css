@@ -1,0 +1,147 @@
+body {
+    background-color: lightblue;
+    display: inline-flex; /* or inline-flex */
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+}
+
+.title {
+    margin: auto;
+}
+
+.projects {
+    display: flex; /* or inline-flex */
+    flex-wrap: wrap;
+}
+
+.projects * {
+    margin: auto;
+    padding: 2px;   
+    min-width: 100px;
+    margin-top: 5px;
+}
+
+.projects div {
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
+.categories {
+    display: flex; /* or inline-flex */
+    flex-direction: row;
+}
+
+.categories * {
+    margin: auto;
+}
+
+h1, h2, h3 {
+    margin: auto;
+}
+
+img {
+    margin: auto;
+}
+
+nav {
+    margin-bottom: 10px;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: lightskyblue;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: gray;
+}
+
+#title {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#user_projects, .categories {
+    display: flex; /* or inline-flex */
+    flex-direction: row;
+    margin: auto;
+}
+
+.user_projects_category, .category {
+    border: 1px solid gray;
+    padding: 5px;
+    background-color: lightslategray;
+    cursor: pointer;
+    margin: 2px;
+}
+
+.user_projects_category:hover, .category:hover {
+    background-color: lightskyblue;
+}
+
+#apply_button {
+    border: 1px solid gray;
+    padding: 5px;
+    background-color: lightslategray;
+    cursor: pointer;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#apply_button:hover {
+    background-color: lightskyblue;
+}
+
+#project_meta {
+    margin: auto;
+}
+
+div {
+    margin: auto;
+}
+
+form {
+    margin: auto;
+}
+
+.applicant{
+    border: 1px solid gray;
+    padding: 5px;
+}
+
+#project_buttons div {
+    margin-left: 180px;
+}
+
+button {
+    margin: 5px;
+}
+
+#dashboard {
+    display: flex;
+    flex-direction: column;
+}
+
+#dashboard * {
+    margin-bottom: 5px;
+}
